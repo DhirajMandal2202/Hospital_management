@@ -1,0 +1,81 @@
+<div class="container " style="margin-top: 5rem;">
+    <div class=" table_body  bg-white  shadow-lg  " style="width: 100%;">
+
+        <div class="">
+            <div class="table-responsive">
+                <div class="table-wrapper ">
+                    <div class="table-title " style="margin-top: 10px;">
+                        <div class="row">
+                            <div class="col-sm-5 text-black">
+                                <h2> <b> Medicine List </b></h2>
+                            </div>
+
+                            <!-- Search bar -->
+                            <!-- Search bar -->
+                            <div class="col-sm-3 text-black container text-left">
+
+                            </div>
+                            <div class="col-sm-3 text-black container text-left">
+                                <div class="form-outline">
+                                    <input id="search-input" type="text" id="form1" class="form-control"
+                                        [(ngModel)]="searchText" (ngModelChange)="Search()" placeholder="Search" />
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+
+                    <table class="table table-striped table-hover text-center">
+                        <thead class="text-center">
+                            <tr>
+                                <th>Id</th>
+                                <th>Medicine Names</th>
+                                <th>In-Stock</th>
+                                <th> per price</th>
+                                <th>Update Medicine</th>
+
+                                <!-- <th>Shift</th>
+                                <th>Priority</th>-->
+                            </tr>
+                        </thead>
+                        <tbody class="text-center">
+                            <tr *ngFor="let item of logList | filter:searchText | paginate:{
+                                itemsPerPage:tableSize, 
+                                currentPage:page,
+                                totalItems:count};let i =index">
+                                <!-- <td colspan="2">{{i+1}}</td> -->
+                                <td>{{item.id}}</td>
+                                <td>{{item.med_name}}</td>
+                                <td>{{item.instock}}</td>
+                                <td>{{item.per_price}}</td>
+                                <td><a [routerLink]="['/hospital/adminPage/pharmacy/updateStock']"><button
+                                            class="btn btn-primary">update</button></a></td>
+
+                            </tr>
+
+                            <!-- Pagniation body  -->
+                            <tr>
+                                <td colspan="12"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="12" class="text-center" style="background-color: #aab4bc;">
+                                    <div class="container">
+                                        <pagination-controls previousLabel="Prev" nextLabel="Next"
+                                            (pageChange)="onTableDataChange($event)">
+                                        </pagination-controls>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- /Pagniation body  -->
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

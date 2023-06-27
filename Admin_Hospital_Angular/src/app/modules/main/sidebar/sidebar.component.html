@@ -1,0 +1,337 @@
+<aside class="main-sidebar sidebar-light-primary elevation-4">
+
+  <a href="index3.html" class="brand-link">
+    <img src="assets/img/icon_h.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+    <span class="brand-text font-weight-light">Hospital</span>
+  </a>
+
+  <div class="sidebar">
+
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="image">
+        <img src="assets/img/default-profile.png" class="img-circle elevation-2" alt="User Image">
+      </div>
+      <div class="info">
+        <a class="d-block">{{email}}</a>
+      </div>
+    </div>
+
+
+
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+
+
+        <ng-template [ngIf]="verify==1">
+
+          <li class="nav-item ">
+            <a [routerLink]="['/hospital/adminPage/dashboard']" class="nav-link " [routerLinkActive]="['active']">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+                <!-- <i class="right fas fa-angle-left"></i> -->
+              </p>
+            </a>
+
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/hospital/adminPage/doctor']" [routerLinkActive]="['active']">
+              <!-- <i class="nav-icon fas fa-th"></i> -->
+              <i class="nav-icon fa-solid fa-stethoscope"></i>
+              <p>
+                Doctors
+                <!-- <span class="right badge badge-danger">New</span> -->
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview  ">
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/hospital/adminPage/doctor/list']" [routerLinkActive]="['active']">
+
+                  <i class="nav-icon fa-solid fa-circle-chevron-right"></i>
+                  <p>Doctor List</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/hospital/adminPage/doctor/addDoctor']"
+                  [routerLinkActive]="['active']">
+
+                  <i class="nav-icon fa-solid fa-circle-chevron-right"></i>
+                  <p>Add Doctor</p>
+                </a>
+              </li>
+
+
+
+            </ul>
+          </li>
+
+
+          <li class="nav-item ">
+
+
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/hospital/adminPage/department']" [routerLinkActive]="['active']">
+
+              <i class="nav-icon fa-solid fa-building-user"></i>
+              <p>
+                Department
+                <!-- <span class="right badge badge-danger">New</span> -->
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview  ">
+
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/hospital/adminPage/department/departmentList']"
+                  [routerLinkActive]="['active']">
+
+                  <i class="nav-icon fa-solid fa-circle-chevron-right"></i>
+                  <p>Department List</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/hospital/adminPage/department/addDepartment']"
+                  [routerLinkActive]="['active']">
+
+                  <i class="nav-icon fa-solid fa-circle-chevron-right"></i>
+                  <p>Add Department</p>
+                </a>
+              </li>
+
+
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/hospital/adminPage/pathology']" [routerLinkActive]="['active']">
+              <!-- <i class="nav-icon fas fa-th"></i> -->
+              <i class="nav-icon fa-solid fa-microscope"></i>
+              <p>
+                Pathology
+                <!-- <span class="right badge badge-danger">New</span> -->
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview  ">
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/hospital/adminPage/pathology/addTest']"
+                  [routerLinkActive]="['active']">
+
+                  <i class="nav-icon fa-solid fa-circle-chevron-right"></i>
+                  <p>Add Test</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/hospital/adminPage/pathology/pathologyTestList']"
+                  [routerLinkActive]="['active']">
+
+                  <i class="nav-icon fa-solid fa-circle-chevron-right"></i>
+                  <p>Test List</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/hospital/adminPage/pathology/pathologyBillList']"
+                  [routerLinkActive]="['active']">
+
+                  <i class="nav-icon fa-solid fa-circle-chevron-right"></i>
+                  <p>Bill List</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/hospital/adminPage/pathology/pathologyBill']"
+                  [routerLinkActive]="['active']">
+
+                  <i class="nav-icon fa-solid fa-circle-chevron-right"></i>
+                  <p>Create Bill</p>
+                </a>
+              </li>
+
+
+
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/hospital/adminPage/pharmacy']" [routerLinkActive]="['active']">
+
+              <!-- <i class="nav-icon fa-solid fa-stethoscope"></i> -->
+              <i class=" nav-icon fa-solid fa-mortar-pestle"></i>
+              <p>
+                Pharmacy
+                <!-- <span class="right badge badge-danger">New</span> -->
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview  ">
+              <li class="nav-item" [routerLink]="['/hospital/adminPage/pharmacy/addMedicines']"
+                [routerLinkActive]="['active']">
+                <a class="nav-link">
+
+                  <i class="nav-icon fa-solid fa-circle-chevron-right"></i>
+                  <p>Add Medicines</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/hospital/adminPage/pharmacy/medicinesList']"
+                  [routerLinkActive]="['active']">
+
+                  <i class="nav-icon fa-solid fa-circle-chevron-right"></i>
+                  <p>Medicines List</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/hospital/adminPage/pharmacy/billList']"
+                  [routerLinkActive]="['active']">
+
+                  <i class="nav-icon fa-solid fa-circle-chevron-right"></i>
+                  <p>Bill List</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/hospital/adminPage/pharmacy/createBill']"
+                  [routerLinkActive]="['active']">
+
+                  <i class="nav-icon fa-solid fa-circle-chevron-right"></i>
+                  <p>Create Bill </p>
+                </a>
+              </li>
+
+
+
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/hospital/adminPage/patientDetails']" [routerLinkActive]="['active']">
+
+              <i class="nav-icon fa-solid fa-hospital-user"></i>
+              <p>
+                Patient
+
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview  ">
+              <!-- <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/admin/patient/addAppointment']" [routerLinkActive]="['active']">
+
+                  <i class="nav-icon fa-solid fa-circle-chevron-right"></i>
+                  <p>Add Appointment</p>
+                </a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/hospital/adminPage/patientDetails/patientList']"
+                  [routerLinkActive]="['active']">
+
+                  <i class="nav-icon fa-solid fa-circle-chevron-right"></i>
+                  <p>Patient List</p>
+                </a>
+              </li>
+
+
+            </ul>
+          </li>
+
+
+
+
+
+        </ng-template>
+
+
+        <ng-template [ngIf]="verify==2">
+          <li class="nav-header">
+            <h4>Appointment</h4>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/hospital/patientPage/addAppointment']" [routerLinkActive]="['active']">
+
+              <!-- <i class="nav-icon fa-solid fa-circle-chevron-right"></i> -->
+              <!-- <i class="nav-icon fa-solid fa-plus"></i> -->
+              <i class=" nav-icon fa-solid fa-calendar-plus"></i>
+              <p>Add Appointment</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/hospital/patientPage/appointmentDetails']"
+              [routerLinkActive]="['active']">
+
+              <!-- <i class="nav-icon fa-solid fa-circle-chevron-right"></i> -->
+              <i class="nav-icon fa-solid fa-calendar-check"></i>
+              <p>Appointment Details</p>
+            </a>
+          </li>
+        </ng-template>
+
+        <ng-template [ngIf]="verify==3">
+
+          <li class="nav-header">
+            <h4>Appointment</h4>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/hospital/doctorPage/appointmentList']" [routerLinkActive]="['active']">
+
+              <!-- <i class="nav-icon fa-solid fa-circle-chevron-right"></i> -->
+              <i class="nav-icon fa-solid fa-list"></i>
+              <p>Request Appointment</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/hospital/doctorPage/approvedList']" [routerLinkActive]="['active']">
+
+              <!-- <i class="nav-icon fa-solid fa-circle-chevron-right"></i> -->
+              <i class="nav-icon fa-solid fa-calendar-check"></i>
+              <p>Appointment List</p>
+            </a>
+          </li>
+
+
+
+
+        </ng-template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <li class="nav-header">
+          <h4>Log Out</h4>
+        </li>
+
+
+        <li class="nav-item nav-footer">
+          <a (click)="logout()" class="nav-link" [routerLinkActive]="['active']">
+            <i class=" nav-icon fa-sharp fa-solid fa-right-from-bracket"></i>
+            <p>
+              Log Out
+              <!-- <i class="fas fa-angle-left right"></i> -->
+            </p>
+          </a>
+
+        </li>
+
+      </ul>
+    </nav>
+
+  </div>
+
+</aside>

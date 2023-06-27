@@ -1,0 +1,64 @@
+<div class="container">
+    <div class=" table_body  bg-white  shadow-lg " style="width: 100%;">
+
+        <div>
+            <div class="table-responsive">
+                <div class="table-wrapper ">
+                    <div class="table-title " style="margin-top: 10px;">
+                        <div class="row">
+                            <div class="col-sm-5 text-black">
+                                <h2><b>Category</b></h2>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="card bg-light mb-3 mt-3" style="max-width: 100%;">
+
+
+                            <div class="card-body">
+                                <div class="card-header">
+                                    <h5><b>Update Category</b></h5>
+                                </div>
+
+                                <form #updateCategory="ngForm" (ngSubmit)="update(updateCategory.value)">
+                                    <div class="form-group">
+                                        <!-- <label for="exampleFormControlInput2"></label> -->
+                                        <label for="updateCategory">name</label>
+                                        <!-- <input type="text" class="form-control" ngModel id="updateCategory" value="Social news" name="updateCategory"> -->
+                                        <input type="text" id="updateCategory" name="category_name" class="form-control"
+                                            [(ngModel)]="category_name">
+
+
+                                        <button type="button" class="btn btn-primary float-right mt-2 ml-3 "
+                                            [routerLink]="['/admin/category']">Back</button>
+
+                                        <button type="submit" class="btn btn-success float-right mt-2">Save</button>
+
+
+
+
+                                    </div>
+
+
+
+
+
+
+                                </form>
+
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

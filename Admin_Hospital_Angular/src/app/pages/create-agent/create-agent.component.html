@@ -1,0 +1,63 @@
+<div class="container">
+    <div class=" table_body  bg-white  shadow-lg " style="width: 100%;">
+
+        <div>
+            <div class="table-responsive">
+                <div class="table-wrapper ">
+                    <div class="table-title " style="margin-top: 10px;">
+                        <div class="row">
+                            <div class="col-sm-5 text-black">
+                                <h2><b>Add Agent</b></h2>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="card bg-light mb-3 mt-3" style="max-width: 100%;">
+
+                            <div class="card-header">
+                                <h5><b>Create New Agent</b></h5>
+                            </div>
+                            <div class="card-body">
+
+                                <form #createAgent="ngForm" (ngSubmit)="getValue(createAgent.value)">
+                                    <div class="form-group">
+                                        <label for="name">Agent Name</label>
+                                        <input type="text" ngModel class="form-control" id="name" name="agent_name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" ngModel class="form-control" id="email" name="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address">Address</label>
+                                        <input type="text" ngModel class="form-control" id="address" name="address">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pass">Password</label>
+                                        <input type="text" ngModel class="form-control" id="pass" name="password">
+                                    </div>
+
+
+                                    <button type="submit" class="btn btn-success float-right ">Save</button>
+
+
+
+
+
+                                </form>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,113 @@
+<div class="content-header " style="margin-top: 5rem ;">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">Dashboard </h1>
+            </div>
+            <!-- /.col -->
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Dashboard</li>
+                </ol>
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+            <div class="col-lg-3 col-6" style="cursor: pointer;">
+                <!-- small box -->
+                <div class="small-box bg-info" [routerLink]="['/admin/dashboard/newpost']">
+                    <div class="inner">
+                        <h3>Doctors</h3><br>
+
+                        <!-- <p>-----------------------------------------------------------</p> -->
+                    </div>
+                    <div class="icon">
+                        <!-- <i class="ion ion-ios-paper"></i> -->
+                        <i class="icon fa-solid fa-stethoscope"></i>
+                    </div>
+                    <a class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6" style="cursor: pointer;">
+                <!-- small box -->
+                <div class="small-box bg-success" [routerLink]="['/admin/dashboard/history']">
+                    <div class="inner">
+                        <h3>Nurses</h3><br>
+
+                        <!-- <p>History</p> -->
+                    </div>
+                    <div class="icon">
+                        <!-- <i class="ion ion-stats-bars"></i> -->
+                        <i class="fa-solid fa-user-nurse"></i>
+                    </div>
+                    <a class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+
+            <!-- ./col -->
+            <div class="col-lg-3 col-6" style="cursor: pointer;">
+                <!-- small box -->
+                <div class="small-box " style="background-color: #ffc107" [routerLink]="['/admin/dashboard/users']">
+                    <div class="inner">
+                        <h3 style="color: white;">Patients</h3><br>
+
+                        <!-- <p>Charts</p> -->
+                    </div>
+                    <div class="icon">
+                        <!-- <i class="ion ion-person-add"></i> -->
+                        <i class="fa-solid fa-bed-pulse"></i>
+                    </div>
+                    <a class="small-box-footer">More info <i class="fas fa-arrow-circle-right "></i></a>
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6" style="cursor: pointer;">
+                <!-- small box -->
+                <div class="small-box bg-danger" [routerLink]="['/admin/dashboard/charts']">
+                    <div class="inner">
+                        <h3>Pharmacy</h3><br>
+
+                        <!-- <p>Charts</p> -->
+                    </div>
+                    <div class="icon">
+                        <!-- <i class="ion ion-pie-graph"></i> -->
+                        <i class="fa-solid fa-mortar-pestle"></i>
+                    </div>
+                    <a class="small-box-footer">More info <i class="fas fa-arrow-circle-right "></i></a>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- Main row -->
+
+
+
+
+</section>
+<section style="width: 100%; padding:50px;">
+
+    <router-outlet></router-outlet>
+</section>
+
+
+<!-- <app-charts></app-charts> -->
+
+
+
+
+
+<!-- /.content -->

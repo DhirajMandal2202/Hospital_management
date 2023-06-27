@@ -1,0 +1,143 @@
+<div class="container">
+    <div class=" table_body  bg-white  shadow-lg " style="width: 100%;">
+
+        <div>
+            <div class="table-responsive">
+                <div class="table-wrapper ">
+                    <div class="table-title " style="margin-top: 10px;">
+                        <div class="row">
+                            <div class="col-sm-5 text-black">
+                                <h2><b>Pathology Bill</b></h2>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="card bg-light mb-3 mt-3" style="max-width: 100%;">
+
+                            <div class="card-header">
+                                <h5><b>Bill</b></h5>
+                            </div>
+                            <div class="card-body">
+
+                                <form #addBill="ngForm" (ngSubmit)="getValue(addBill.value)">
+
+                                    <div class="row">
+                                        <div class="form-group col-sm-6">
+                                            <label>Select Patient Name:</label>
+                                            <select class="form-control required" name="patient_id" id="patient_name"
+                                                ngModel required>
+                                                <option value="0">Select Name</option>
+
+                                                <ng-template ngFor let-list [ngForOf]="patientList">
+                                                    <option value="{{list['id']}}">ID: {{list['id']}}_
+                                                        {{list['full_name'] | pascalCase}}
+                                                    </option>
+
+                                                </ng-template>
+                                            </select>
+                                            <span id="shift_error_msg" style="color:red"></span>
+                                        </div>
+
+                                        <div class="form-group col-sm-6">
+                                            <label>Select Test:</label>
+                                            <select class="form-control required" name="test_id" id="test_name" ngModel
+                                                (change)="fetchAmount($event)" required>
+                                                <option value="0">Select Test</option>
+
+                                                <ng-template ngFor let-element [ngForOf]="testList">
+                                                    <option value="{{element['id']}}">{{element['test_name'] |
+                                                        pascalCase}}
+                                                    </option>
+
+                                                </ng-template>
+                                            </select>
+                                            <span id="shift_error_msg" style="color:red"></span>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="row">
+
+
+
+                                        <div class="form-group col-sm-6">
+                                            <label>Select Doctor:</label>
+                                            <select class="form-control required" name="doctor_id" id="doctor_id"
+                                                ngModel required>
+                                                <option value="0">Select Doctor</option>
+
+                                                <ng-template ngFor let-element [ngForOf]="doctorList">
+                                                    <option value="{{element['id']}}">ID: {{element['id']}}_
+                                                        {{element['first_name'] | pascalCase }}_{{element['last_name'] |
+                                                        pascalCase}}</option>
+
+                                                </ng-template>
+
+
+
+                                            </select>
+                                            <span id="shift_error_msg" style="color:red"></span>
+                                        </div>
+
+                                        <div class="form-group col-6">
+                                            <label for="reportDate">Report Date</label>
+                                            <input type="date" ngModel class="form-control" id="reportDate" name="date">
+                                        </div>
+
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-sm-6">
+                                            <label>Select Payment Method:</label>
+                                            <select class="form-control required" name="payment_id" id="payment" ngModel
+                                                required>
+                                                <option value="0">Payment Method</option>
+
+                                                <ng-template ngFor let-element [ngForOf]="payment">
+                                                    <option value="{{element['id']}}">{{element['payment_method'] |
+                                                        pascalCase}}
+                                                    </option>
+
+                                                </ng-template>
+                                            </select>
+                                            <span id="shift_error_msg" style="color:red"></span>
+                                        </div>
+
+                                        <div class="form-group col-sm-6">
+                                            <label for="amount">Amount</label>
+                                            <input type="text" [(ngModel)]="amount" class="form-control" id="amount"
+                                                [value]="amount" name="amount">
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+                                    <button type="button" class="btn btn-primary float-right ml-3 "
+                                        [routerLink]="['/admin/category']">Back</button>
+                                    <button type="submit" class="btn btn-success float-right ">Save</button>
+
+
+
+
+
+                                </form>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
